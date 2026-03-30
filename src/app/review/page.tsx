@@ -34,20 +34,6 @@ export default function ReviewPage() {
         wrongRu: 0,
         wrongKz: 0,
     });
-    if (loading) {
-        return (
-            <main className="min-h-screen flex items-center justify-center">
-                <div>Loading...</div>
-            </main>
-        );
-    }
-
-    if (!user) {
-        if (typeof window !== "undefined") {
-            window.location.href = "/login";
-        }
-        return null;
-    }
 
     useEffect(() => {
         const bootstrap = async () => {
